@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package myiterable;
-
+import java.util.Iterator;
+import java.util.ListIterator;
 /**
  *
  * @author Farid
@@ -16,6 +17,27 @@ public class MyIterableTester {
       MyIterable <Integer> myList;
       myList = new MyIterable<>(ints);
       MyIterable.printMe(ints);
-        
+      //Simple Iterator
+      SimpleIterator s;
+      s= new SimpleIterator();
+      s.al.add("A");
+      s.al.add("B");
+      Iterator itr = s.al.iterator();
+       for (Object i :  s.al ) {
+       System.out.println(i);
+     }
+       while (itr.hasNext()){
+           Object j= itr.next();
+           System.out.println(j);
+       }
+       ListIterator litr = s.al.listIterator();
+       while (litr.hasNext()){
+           Object e= litr.next();
+           litr.set(e + "FF");
+       }    
+       for (Object j: s.al){
+           System.out.println(j);
+       }
+          
 }
 }
