@@ -13,11 +13,9 @@ public class MyIterableTester {
     public static void main (String [] args){
       Integer [] ints ={1, 2, 3}; 
       String [] strings = {"A","B","C"};
-      MyIterable <String> myList;
-        myList = new MyIterable<>(strings);
-            for (String i: myList){
-            System.out.println(i);
-        } 
+      MyIterable <Integer> myList;
+      myList = new MyIterable<>(ints);
+      MyIterable.printMe(ints);
         
 }
 }
