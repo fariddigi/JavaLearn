@@ -22,13 +22,19 @@ public class MyIterable <T> implements Iterable <T>{
         Collections.reverse(list);
     }
     /**
+     * @param x
      * @param args the command line arguments
      */
-   
+    
+   public static <T> void printMe (T [] x) {
+     for (T i :x ) {
+       System.out.println(i);
+     }
+   }
 
     @Override
     public Iterator<T> iterator() {
         return list.iterator();
      }
-    
+
 }
